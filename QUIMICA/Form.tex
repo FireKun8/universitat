@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage[landscape]{geometry}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{esint}
+\usepackage{bigints}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathmorphing}
+\usepackage{amsmath,amssymb}
+\usepackage{setspace}
+
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{xhfill}
+\makeatletter
+
+\newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
+\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+
+\title{física eléctrica}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\advance\topmargin-.8in
+\advance\textheight3in
+\advance\textwidth3in
+\advance\oddsidemargin-1.5in
+\advance\evensidemargin-1.5in
+\parindent0pt
+\parskip2pt
+\newcommand{\hr}{\centerline{\rule{3.5in}{1pt}}}
+%\colorbox[HTML]{e4e4e4}{\makebox[\textwidth-2\fboxsep][l]{texto}
+\newcommand{\nc}[2][]{%
+\tikz \draw [draw=black, ultra thick, #1]
+    ($(current page.center)-(0.5\linewidth,0)$) -- 
+    ($(current page.center)+(0.5\linewidth,0)$)
+    node [midway, fill=white] {#2};
+}
+
+\setstretch{1.5}
+\begin{document}
+
+\begin{center}{\huge{\textbf{QUÍMICA}}}\\
+\end{center}
+\begin{multicols*}{3}
+
+\tikzstyle{mybox} = [draw=black, fill=white, very thick,
+    rectangle, rounded corners, inner sep=10pt, inner ysep=13pt]
+\tikzstyle{fancytitle} =[fill=black, text=white, font=\bfseries]
+
+%---------------------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    asa\\
+    \hr{}
+    asa\\
+    \end{minipage}
+};
+%---------------------------------
+\node[fancytitle, right=10pt] at (box.north west) {NOMENCLATURA};
+\end{tikzpicture}
+
+%---------------------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    \nc{Ordre 0}
+    $[A] = [A_0] - akt$\\
+    $t_{\frac{1}{2}} = \frac{[A_0]}{2ak}$\\
+    \nc{Ordre 1}
+    $\ln[A] = \ln[A_0] - akt$\\
+    $t_{\frac{1}{2}} = \frac{\ln2}{ak}$\\
+    \nc{Ordre 2}
+    $\frac{1}{[A]} = \frac{1}{[A_0]} + akt$\\
+    $t_{\frac{1}{2}} = \frac{1}{ak[A_0]}$\\
+    \nc{Arrhenius}
+    $\ln\frac{k_1}{k_2}=\frac{E_a}{R}\left(\frac{1}{T_2}-\frac{1}{T_1}\right)$\\
+    $k=Ae^{-\frac{E_a}{RT}}$
+    \end{minipage}
+};
+%---------------------------------
+\node[fancytitle, right=10pt] at (box.north west) {CINÈTICA REACCIÓ};
+\end{tikzpicture}
+
+\end{multicols*}
+\end{document}

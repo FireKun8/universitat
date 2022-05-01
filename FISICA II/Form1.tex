@@ -1,0 +1,130 @@
+\documentclass[12pt]{article}
+\usepackage[landscape]{geometry}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{esint}
+\usepackage{bigints}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathmorphing}
+\usepackage{amsmath,amssymb}
+\usepackage{setspace}
+
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{xhfill}
+\makeatletter
+
+\newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
+\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+
+\title{física eléctrica}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+%cambios de unidades (pt, mm, cm,ex,em,bp,dd,pc,sp) https://tex.stackexchange.com/questions/8260/what-are-the-various-units-ex-em-in-pt-bp-dd-pc-expressed-in-mm
+\advance\topmargin-.8in
+\advance\textheight3in
+\advance\textwidth3in
+\advance\oddsidemargin-1.5in
+\advance\evensidemargin-1.5in
+\parindent0pt
+\parskip2pt
+\newcommand{\hr}{\centerline{\rule{3.5in}{1pt}}}
+%\colorbox[HTML]{e4e4e4}{\makebox[\textwidth-2\fboxsep][l]{texto}
+\newcommand{\nc}[2][]{%
+\tikz \draw [draw=black, ultra thick, #1]
+    ($(current page.center)-(0.5\linewidth,0)$) -- 
+    ($(current page.center)+(0.5\linewidth,0)$)
+    node [midway, fill=white] {#2};
+}% tomado de https://tex.stackexchange.com/questions/179425/a-new-command-of-the-form-tex
+
+\setstretch{1.5}
+\begin{document}
+
+\begin{center}{\huge{\textbf{FÍSICA II}}}\\
+\end{center}
+\begin{multicols*}{3}
+
+\tikzstyle{mybox} = [draw=white, fill=white, very thick,
+    rectangle, rounded corners, inner sep=10pt, inner ysep=13pt]
+\tikzstyle{fancytitle} =[fill=white, text=white, font=\bfseries]
+
+%---------------------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    $F=kx$\\
+    $x(t)=A\cos{(\omega t + \phi)}$ \\
+    $T=\frac{2\pi}{\omega}$\\
+    $A=\sqrt{x^2_1 + \frac{v^2_1}{\omega^2}}$\\
+    $\omega=\sqrt{\frac{k}{m}}$\\
+    $U=\frac{1}{2}kx^2$\\
+    $T=2\pi\sqrt{\frac{L}{g}}$
+    \end{minipage}
+};
+%---------------------------------
+\node[fancytitle, right=10pt] at (box.north west) {MHS};
+\end{tikzpicture}
+
+%---------------------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    $F_f=-bv$\\
+    $x(t)=Ae^{-\beta t}\cos{(\omega_1 t + \phi)}$ \\
+    $\beta = \frac{b}{2m}$\\
+    $\omega_1 = \sqrt{\omega^2_0 - \beta^2}$\\
+    $E(t)=E_0e^{-2\beta t}$\\
+    $\tau = \frac{m}{b}$\\
+    $Q=\frac{\omega_0}{2\beta}$
+    \end{minipage}
+};
+%---------------------------------
+\node[fancytitle, right=10pt] at (box.north west) {AMORTIDES};
+\end{tikzpicture}
+
+%---------------------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    $F_0=amw^2$\\
+    $A=\frac{F_0}{m\sqrt{(\omega_0^2-w^2)^2+4\beta^2\omega^2}}$ \\
+    $\tau=\frac{1}{\beta} \text{   (de 3 a 7)}$\\
+    $\tan{(\epsilon)}=\tan{\left(\delta-\frac{\pi}{2}\right)}=\frac{1}{-\tan{\delta}}=\frac{\omega^2-\omega_0^2}{2\beta\omega}$\\
+    $Z=m\sqrt{\left(\frac{\omega_0^2-\omega^2}{\omega}\right)^2+4\beta^2}$\\
+    $v(t)=\omega A\cos{(\omega t-\epsilon)}$\\
+    $\omega = \sqrt{\omega_0^2-2\beta^2}$\\
+    $\cos{\epsilon}=\frac{b}{Z}$\\
+    $V_{RES}=\frac{F_0}{b}\cos{(\omega_0t)} \hspace{5mm} x_{RES}=\frac{F_0}{b\omega_0}\sin{(\omega_0t)}$\\
+    $<P_S>=\frac{1}{2}\frac{F_0^2}{Z^2}b \hspace{10mm} <P_S>_{RES}=\frac{1}{2}\frac{F_0^2}{b}$\\
+    $Q=\frac{\omega_0}{2\beta}=\frac{\omega_0}{\Delta\omega}$\\
+    $\Delta\omega = 2\beta$
+    \end{minipage}
+};
+%---------------------------------
+\node[fancytitle, right=10pt] at (box.north west) {FORÇADES};
+\end{tikzpicture}
+
+%---------------------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    $I=\frac{1}{3}ML^2$\\
+    $I=\frac{1}{12}ML^2$ \\
+    $I=\frac{1}{2}MR^2$\\
+    $I=MR^2$
+    \end{minipage}
+};
+%---------------------------------
+\node[fancytitle, right=10pt] at (box.north west) {MOM. INÈRCIA};
+\end{tikzpicture}
+
+\end{multicols*}
+\end{document}
