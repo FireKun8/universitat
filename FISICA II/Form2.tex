@@ -62,7 +62,7 @@
     $k\rightarrow$ Nombre d'ona\\
     $\lambda = \frac{2\pi}{k}\rightarrow$ Longitud d'ona\\
     $B\rightarrow$ Mòdul compressibilitat\\
-    $B\rightarrow$ Mòdul compressibilitat\\
+    $\mu\rightarrow$ Densitat lineal\\
     $\rho\rightarrow$ Densitat medi\\
     $p_m\rightarrow$ Sobrepressió\\
     $Z\rightarrow$ Impedància acústica\\
@@ -73,6 +73,17 @@
 };
 %---------------------------------
 \node[fancytitle, right=10pt] at (box.north west) {NOMENCLATURA};
+\end{tikzpicture}
+
+%---------------------------
+\begin{tikzpicture}
+    \node [mybox] (box){%
+        \begin{minipage}{0.3\textwidth}
+        $c = \sqrt{\frac{F}{\mu}}$\\
+        \end{minipage}
+    };
+%---------------------------------
+\node[fancytitle, right=10pt] at (box.north west) {ALTRES};
 \end{tikzpicture}
 
 %---------------------------
@@ -108,6 +119,19 @@
 %---------------------------------
 \node[fancytitle, right=10pt] at (box.north west) {PROPAGACIÓ ONES};
 \end{tikzpicture}
+
+%---------------------------
+\begin{tikzpicture}
+    \node [mybox] (box){%
+        \begin{minipage}{0.3\textwidth}
+        \nc{Ones estacionàries}
+        $L = (2n - 1)\frac{\lambda}{4}$ \vspace{5mm} (Tancat-Obert)\\
+        $L = n\frac{\lambda}{2}$ \vspace{5mm} (Obert-Obert / Tancat-Tancat)\\
+        \end{minipage}
+    };
+    %---------------------------------
+    \node[fancytitle, right=10pt] at (box.north west) {SUPERPOSICIÓ ONES};
+    \end{tikzpicture}
 
 \end{multicols*}
 \end{document}
