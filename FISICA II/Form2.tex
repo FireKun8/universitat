@@ -62,12 +62,13 @@
     $k\rightarrow$ Nombre d'ona\\
     $\lambda = \frac{2\pi}{k}\rightarrow$ Longitud d'ona\\
     $B\rightarrow$ Mòdul compressibilitat\\
+    $Y\rightarrow$ Mòdul Young\\
     $\mu\rightarrow$ Densitat lineal\\
     $\rho\rightarrow$ Densitat medi\\
-    $p_m\rightarrow$ Sobrepressió\\
+    $p_m\rightarrow$ Amplitud sobrepressió\\
     $Z\rightarrow$ Impedància acústica\\
     $c = \frac{\omega}{k} = \lambda f\rightarrow$ Velocitat ona\\
-    $s_m\rightarrow$ Amplitud ona\\
+    $s_m / y_m\rightarrow$ Amplitud ona\\
     $\beta\rightarrow$ Intensitat so o sonoritat\\
     \end{minipage}
 };
@@ -79,20 +80,28 @@
 \begin{tikzpicture}
     \node [mybox] (box){%
         \begin{minipage}{0.3\textwidth}
+        $y = y_m\cos{(kx - wt + \phi)}$ \vspace{5mm} (Sentit positiu)\\
+        \nc{Corda}
         $c = \sqrt{\frac{F}{\mu}}$\\
+        $<P> = \frac{1}{2}\mu c \omega^2 y_m^2$\\
+        \nc{Sòlid}
+        $c = \sqrt{\frac{Y}{\rho}}$\\
+        $<P> = \frac{1}{2}cS\rho\omega^2 y_m^2$\\
         \end{minipage}
     };
 %---------------------------------
-\node[fancytitle, right=10pt] at (box.north west) {ALTRES};
+\node[fancytitle, right=10pt] at (box.north west) {ONES};
 \end{tikzpicture}
+
 
 %---------------------------
 \begin{tikzpicture}
-\node [mybox] (box){%
+\node [mybox] (box){%   
     \begin{minipage}{0.3\textwidth}
     $p_m=\rho c\omega s_m$\\
+    $c=\sqrt{\frac{B}{\rho}}$\\
     $Z=\rho c$\\
-    $<P>=\frac{1}{2}S\frac{p_m^2}{Z}$\\
+    $<P>=\frac{1}{2}\frac{p_m^2}{Z}S$\\
     $<I>=\frac{1}{2}\frac{p_m^2}{Z}$\\
     $\beta=10\log\frac{I}{I_0}$
     \end{minipage}
