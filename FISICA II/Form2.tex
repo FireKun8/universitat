@@ -44,7 +44,7 @@
     node [midway, fill=white] {#2};
 }
 
-\setstretch{1.5}
+\setstretch{1}
 \begin{document}
 
 \begin{center}{\huge{\textbf{FÍSICA II}}}\\
@@ -69,7 +69,7 @@
     $Z\rightarrow$ Impedància acústica\\
     $c = \frac{\omega}{k} = \lambda f\rightarrow$ Velocitat ona\\
     $s_m / y_m\rightarrow$ Amplitud ona\\
-    $\beta\rightarrow$ Intensitat so o sonoritat\\
+    $\beta\rightarrow$ Intensitat so o sonoritat
     \end{minipage}
 };
 %---------------------------------
@@ -87,27 +87,17 @@
         \nc{Sòlid}
         $c = \sqrt{\frac{Y}{\rho}}$\\
         $<P> = \frac{1}{2}cS\rho\omega^2 y_m^2$\\
+        \nc{Fluid}
+        $p_m=\rho c\omega s_m$\\
+        $c=\sqrt{\frac{B}{\rho}}$\\
+        $Z=\rho c$\\
+        $<P>=\frac{1}{2}\frac{p_m^2}{Z}S$\\
+        $<I>=\frac{1}{2}\frac{p_m^2}{Z}$\\
+        $\beta=10\log\frac{I}{I_0}$
         \end{minipage}
     };
 %---------------------------------
 \node[fancytitle, right=10pt] at (box.north west) {ONES};
-\end{tikzpicture}
-
-
-%---------------------------
-\begin{tikzpicture}
-\node [mybox] (box){%   
-    \begin{minipage}{0.3\textwidth}
-    $p_m=\rho c\omega s_m$\\
-    $c=\sqrt{\frac{B}{\rho}}$\\
-    $Z=\rho c$\\
-    $<P>=\frac{1}{2}\frac{p_m^2}{Z}S$\\
-    $<I>=\frac{1}{2}\frac{p_m^2}{Z}$\\
-    $\beta=10\log\frac{I}{I_0}$
-    \end{minipage}
-};
-%---------------------------------
-\node[fancytitle, right=10pt] at (box.north west) {ONES EN FLUID};
 \end{tikzpicture}
 
 %---------------------------
