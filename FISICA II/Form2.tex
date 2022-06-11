@@ -12,6 +12,7 @@
 \usetikzlibrary{decorations.pathmorphing}
 \usepackage{amsmath,amssymb}
 \usepackage{setspace}
+\usepackage{gensymb}
 
 \usepackage{colortbl}
 \usepackage{xcolor}
@@ -81,7 +82,7 @@
     \end{minipage}
 };
 %---------------------------------
-\node[fancytitle, right=10pt] at (box.north west) {NOMENCLATURA};
+\node[fancytitle, right=10pt] at (box.north west) {NOMENCLATURA ONES};
 \end{tikzpicture}
 
 %---------------------------
@@ -137,12 +138,62 @@
         $L = n\frac{\lambda}{2}$ \null\hfill \textbf{O-O/T-T}
         \nc{Interferències}
         $\Delta r = n\lambda$ \null\hfill \textbf{Constr.}\\
-        $\Delta r = (2n + 1)\frac{\lambda}{2}$ \null\hfill \textbf{Destr.}
+        $\Delta r = (2n + 1)\frac{\lambda}{2}$ \null\hfill \textbf{Destr.}\\
+        $\varphi = k \Delta r$
+        \end{minipage}
+    };
+%---------------------------------
+\node[fancytitle, right=10pt] at (box.north west) {SUPERPOSICIÓ ONES};
+\end{tikzpicture}
+
+%---------------------------
+\begin{tikzpicture}
+    \node [mybox] (box){%
+        \begin{minipage}{0.3\textwidth}
+        $Q\rightarrow$ Calor\\
+        $C\rightarrow$ Capacitat calorífica\\
+        $c\rightarrow$ Calor específica\\
+        $C_m\rightarrow$ Calor molar\\
+        $R\rightarrow$ Resistència tèrmica\\
+        $k\rightarrow$ Conductivitat tèrmica\\
+        $\frac{dQ}{dt} = \frac{\Delta Q}{\Delta t}\rightarrow$ Flux de calor\\
+        $\frac{dT}{dx}\rightarrow$ Gradient temperatura\\
         \end{minipage}
     };
     %---------------------------------
-    \node[fancytitle, right=10pt] at (box.north west) {SUPERPOSICIÓ ONES};
+    \node[fancytitle, right=10pt] at (box.north west) {NOMENCLATURA TERMO};
     \end{tikzpicture}
+
+%---------------------------
+\begin{tikzpicture}
+    \node [mybox] (box){%
+        \begin{minipage}{0.3\textwidth}
+        $(\degree C\cdot 1.8) + 32 = \degree F$\\
+        $Q = C\Delta T = mc_e \Delta T = nC_m\Delta t$
+        \nc{Conducció calor}
+        $R = \frac{L}{kS}$\\
+        $\frac{\Delta Q}{\Delta t} = kS\frac{T_2 - T_1}{L}$\\
+        \end{minipage}
+    };
+%---------------------------------
+\node[fancytitle, right=10pt] at (box.north west) {TEMPERATURA I CALOR};
+\end{tikzpicture}
+
+%---------------------------
+\begin{tikzpicture}
+    \node [mybox] (box){%
+        \begin{minipage}{0.3\textwidth}
+        $W = 0$ \null\hfill $V=ctant.$\\
+        $W = P(V_2 - V_1)$ \null\hfill $P=ctant.$\\
+        $W = nRT\ln{\frac{V_2}{V_1}}$  \null\hfill $T=ctant.$\\
+        $Q = W + \Delta U$\\
+        $W = \frac{P_1V_1 - P_2V_2}{\gamma -1} = nC_v\Delta T$ \null\hfill \textbf{W adiabàtic}\\
+        $P_1V_1^\gamma = P_2V_2^\gamma$\\
+        \end{minipage}
+    };
+%---------------------------------
+\node[fancytitle, right=10pt] at (box.north west) {1r PRINCIPI};
+\end{tikzpicture}
 
 \end{multicols*}
 \end{document}
