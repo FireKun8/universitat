@@ -157,7 +157,7 @@
         $R\rightarrow$ Resistència tèrmica\\
         $k\rightarrow$ Conductivitat tèrmica\\
         $\frac{dQ}{dt} = \frac{\Delta Q}{\Delta t}\rightarrow$ Flux de calor\\
-        $\frac{dT}{dx}\rightarrow$ Gradient temperatura\\
+        $\frac{dT}{dx}\rightarrow$ Gradient temperatura
         \end{minipage}
     };
     %---------------------------------
@@ -169,7 +169,7 @@
     \node [mybox] (box){%
         \begin{minipage}{0.3\textwidth}
         $(\degree C\cdot 1.8) + 32 = \degree F$\\
-        $Q = C\Delta T = mc_e \Delta T = nC_m\Delta t$
+        $Q = C\Delta T = mc_e \Delta T = nC_m\Delta T$
         \nc{Conducció calor}
         $R = \frac{L}{kS}$\\
         $\frac{\Delta Q}{\Delta t} = kS\frac{T_2 - T_1}{L}$\\
@@ -187,8 +187,17 @@
         $W = P(V_2 - V_1)$ \null\hfill $P=ctant.$\\
         $W = nRT\ln{\frac{V_2}{V_1}}$  \null\hfill $T=ctant.$\\
         $Q = W + \Delta U$\\
-        $W = \frac{P_1V_1 - P_2V_2}{\gamma -1} = nC_v\Delta T$ \null\hfill \textbf{W adiabàtic}\\
+        $\Delta U = 0$ \null\hfill $T=ctant.$
+        \nc{Adiabàtiques}
+        $W = \frac{P_1V_1 - P_2V_2}{\gamma -1} = nC_v\Delta T$\\
         $P_1V_1^\gamma = P_2V_2^\gamma$\\
+        $T_1V_1^{\gamma-1} = T_2V_2^{\gamma-1}$\\
+        $rendiment = \frac{W_{net}}{Q_{abs}} = 1 - \frac{|Q_{surt}|}{Q_{entra}}$
+        \nc{Calors molars}
+        $C_v = \frac{3}{2}R$ \hspace{4mm} $C_p = \frac{5}{2}R$ \hspace{4mm} $\gamma=\frac{5}{3}$ \null\hfill \textbf{Mono.}\\
+        $C_v = \frac{5}{2}R$ \hspace{4mm} $C_p = \frac{7}{2}R$ \hspace{4mm} $\gamma=\frac{7}{5}$ \null\hfill \textbf{Di.}
+        \nc{Carnot}
+        $\eta = 1 - \frac{T_B}{T_A}$  
         \end{minipage}
     };
 %---------------------------------
